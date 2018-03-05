@@ -15,6 +15,9 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.HashMap;
@@ -42,7 +45,20 @@ public class MainActivity extends AppCompatActivity {
                         public void onResponse(String response) {
                             // response
                             Log.d("Response", response);
-                            durum.setText("BAŞARILI\n" + response);
+
+                            try {
+                                JSONObject jsonObj = new JSONObject(response);
+
+                                // Getting JSON Array node
+//                                JSONArray token = jsonObj.getJSONArray("token");
+
+                                String jti = jsonObj.getString("jti");
+                                durum.setText("BAŞARILI\nJTI = " + jti);
+                            }
+                            catch (Exception e)
+                            {
+
+                            }
                         }
                     },
                     new Response.ErrorListener() {

@@ -11,7 +11,7 @@
         android:layout_height="495dp"
         android:orientation="vertical"
         tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp">
+        tools:layout_editor_absoluteY="248dp">
 
         <EditText
             android:id="@+id/username"
@@ -42,4 +42,5 @@
             android:layout_height="wrap_content"
             android:text="DURUM : " />
     </LinearLayout>
+
 </android.support.constraint.ConstraintLayout>

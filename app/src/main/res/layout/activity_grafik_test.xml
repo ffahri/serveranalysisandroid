@@ -11,8 +11,21 @@
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:onClick="veriCek"
-        android:text="Button"
-        tools:layout_editor_absoluteX="97dp"
-        tools:layout_editor_absoluteY="135dp" />
+        android:text="Yenile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/linechart"
+        android:layout_width="352dp"
+        android:layout_height="414dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.901"
+        tools:layout_editor_absoluteX="16dp" />
 </android.support.constraint.ConstraintLayout>

@@ -60,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
                                 String jti = jsonObj.getString("access_token");
                                 durum.setText("BAŞARILI\nJTI = " + jti);
 
+
                                 Toast.makeText(MainActivity.this, "Başarıyla giriş yaptınız", Toast.LENGTH_SHORT).show();
                                 i = new Intent(MainActivity.this,GrafikTest.class);
                                 i.putExtra("token",jti);
